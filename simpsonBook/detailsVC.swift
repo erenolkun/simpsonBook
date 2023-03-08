@@ -8,11 +8,12 @@
 import UIKit
 
 class detailsVC: UIViewController {
+    
+    var selectedSimpson : simpson?
 
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
-    
     
     @IBOutlet weak var jobLabel: UILabel!
     
@@ -20,7 +21,10 @@ class detailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        nameLabel.text = selectedSimpson?.name
+        jobLabel.text = selectedSimpson?.job
+        imageView.image = selectedSimpson?.image
+        
     }
-
+ 
 }
